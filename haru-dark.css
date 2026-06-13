@@ -310,7 +310,7 @@ blockquote,
 }
 
 #write pre {
-    background-color: var(--small-dark-color);
+    background-color: inherit;
 }
 
 #write pre.md-fences {
@@ -334,12 +334,15 @@ code {
     background: var(--small-dark-color);
 }
 
-#write blockquote code {
+#write blockquote pre.md-fences,
+#write blockquote code,
+#write .md-alert pre.md-fences,
+#write .md-alert code {
     margin: 0 2px;
     padding: 4px 6px;
     color: var(--light-color);
     white-space: pre-wrap;
-    background: var(--main-color);
+    background: rgb(40, 40, 40);
     border-radius: 0.5em;
 }
 

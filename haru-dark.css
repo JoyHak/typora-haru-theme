@@ -1403,3 +1403,29 @@ table select:hover {
     background: var(--dark-color);
     box-shadow: 0 0 10px 3px rgba(69, 74, 83, 0.5);   
 }
+
+#zoom-hint,
+#md-notification {
+    background: var(--dark-main-color);
+    box-shadow: 0 1px 0 rgba(12,13,14,.1),0 1px 3px rgba(12,13,14,.1),0 4px 20px rgba(12,13,14,.035),0 1px 1px rgba(12,13,14,.025);
+}
+
+.info-panel-tab-title {
+    width: 8em;
+    padding: 0;
+}
+
+.sidebar-footer,
+footer.ty-footer {
+   border:  0; 
+}
+
+.file-list-item {
+    padding: 0;
+    border:  0;
+}
+
+#file-library, 
+#outline-content {
+    font-family: var(--base-font);
+}

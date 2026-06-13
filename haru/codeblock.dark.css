@@ -3,10 +3,16 @@
 
 /** code highlight */
 
-.cm-s-inner .cm-variable,
-.cm-s-inner .cm-operator,
 .cm-s-inner .cm-property {
-    color: #b8bfc6;
+    color: #ffff82;
+}
+
+.cm-s-inner .cm-variable {
+    color: #80ffff;
+}
+
+.cm-operator {
+    color: #9c3451;
 }
 
 .cm-overlay {
@@ -90,11 +96,11 @@
 }
 
 .cm-s-inner .cm-number {
-    color: #64AB8F;
+    color: #618faf;
 }
 
 .cm-s-inner .cm-variable {
-    color: #b8bfc6;
+    color: #80ffff;
 }
 
 .cm-s-inner .cm-variable-2 {

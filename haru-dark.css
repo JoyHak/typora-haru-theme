@@ -50,7 +50,7 @@
 
 /* global setting */
 body {
-    font-family: "Roboto Slab", "SimHei", serif;
+    font-family: var(--base-font);
     background-color: var(--dark-color);
 }
 
@@ -110,7 +110,7 @@ h2,
     content: "H2";
     border-radius: .3em;
     font-size: .8em;
-    padding: 3px 7px;
+    padding: 3px 5px;
     margin-right: 15px;
     background-color: var(--main-color);
     color: white;
@@ -130,7 +130,7 @@ h2,
     background-color: var(--main-color);
     border-radius: .3em;
     margin-right: 12px;
-    padding: 4px 7px;
+    padding: 4px 5px;
     float: none;
     position: relative;
     top: 0;
@@ -162,9 +162,6 @@ h2,
 #write img {
     border-radius: .5em !important;
     box-shadow: 0 0 10px 3px rgba(134, 136, 137, 0.1);
-    transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
 }
 
 /* #write img:hover {
@@ -177,7 +174,7 @@ h2,
 
 blockquote,
 #write blockquote {
-    padding: 10px 10px;
+    padding: 5px 5px;
     font-size: var(--quote-title-font-size);
     color: var(--blockquote-color);
     border-left: 6px solid var(--main-color);
@@ -208,7 +205,7 @@ blockquote,
     color: white;
     font-size: var(--quote-tag-font-size);
     border-radius: .3em;
-    padding: 3px 7px;
+    padding: 3px 5px;
     margin-right: 15px;
     color: var(--light-color);
 }
@@ -228,7 +225,7 @@ blockquote,
     color: white;
     font-size: var(--quote-tag-font-size);
     border-radius: .3em;
-    padding: 3px 7px;
+    padding: 3px 5px;
     margin-right: 15px;
 }
 
@@ -247,7 +244,7 @@ blockquote,
     color: white;
     font-size: var(--quote-tag-font-size);
     border-radius: .3em;
-    padding: 3px 7px;
+    padding: 3px 5px;
     margin-right: 15px;
     float: none;
     position: relative;
@@ -272,7 +269,7 @@ blockquote,
     color: white;
     font-size: var(--quote-tag-font-size);
     border-radius: .3em;
-    padding: 3px 7px;
+    padding: 3px 5px;
     margin-right: 15px;
     float: none;
     position: relative;
@@ -297,7 +294,7 @@ blockquote,
     color: white;
     font-size: var(--quote-tag-font-size);
     border-radius: .3em;
-    padding: 3px 7px;
+    padding: 3px 5px;
     margin-right: 15px;
     float: none;
     position: relative;
@@ -352,7 +349,7 @@ code {
     color: var(--light-color);
     white-space: pre-wrap;
     background: var(--small-dark-color);
-    border-radius: 8px;
+    border-radius: 0.5em;
 }
 
 #write blockquote code {
@@ -361,7 +358,7 @@ code {
     color: var(--light-color);
     white-space: pre-wrap;
     background: var(--main-color);
-    border-radius: 8px;
+    border-radius: 0.5em;
 }
 
 kbd,
@@ -401,17 +398,7 @@ pre.md-meta-block {
 .md-rawblock-on-edit>.md-rawblock-tooltip {
     background-color: var(--small-dark-color);
     color: var(--font-color);
-    transition: 0.3s linear;
 }
-
-
-
-.md-fences-adv-panel, .md-math-container, .md-mathjax-preview {
-    transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-}
-
 
 #math-inline-preview .md-arrow:after {
     background: var(--small-dark-color);
@@ -473,12 +460,8 @@ pre.md-meta-block {
 {
     border: 1px solid transparent;
     color: rgb(18, 18, 18);
-    height: 30px;
-    padding: 10px;
-    border-radius: .5em;
-    transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
+    padding: 5px;
+    border-radius: 0.3em;
 }
 #write table td {
     font-family: var(--title-font);
@@ -494,7 +477,7 @@ pre.md-meta-block {
     width: 100px;
     text-align: center;
     vertical-align: middle;
-    padding: 10px;
+    padding: 5px;
 }
 table tr:nth-child(odd)
 {
@@ -565,7 +548,7 @@ input[type='checkbox']:hover:before {
 .task-list-item input::before {
     content: "";
     display: inline-block;
-	border-radius: .3em;
+	border-radius: 0.3em;
     vertical-align: middle;
     border: 1.2px solid var(--main-color);
     background-color: #ffffff;
@@ -587,15 +570,11 @@ input[type='checkbox']:hover:before {
 	transition: background-color 200ms ease-in-out;
 }
 
-
-
-
-
 #footer-word-count-label {
     font-family: var(--title-font) !important;
     color: white;
     padding: 1px 8px;
-    border-radius: 1.0em;
+    border-radius: 0.3em;
     background-color: var(--main-color);
 }
 
@@ -775,11 +754,11 @@ color: white;
 
 #megamenu-menu-panel {
     font-family: var(--title-font);
-    padding: 10px;
+    padding: 6px;
 }
 
 .megamenu-menu-panel {
-    padding: 10px;
+    padding: 6px;
     color: var(--font-color);
 }
 
@@ -805,13 +784,13 @@ color: white;
     box-shadow: 0 0 8px 4px rgba(42, 4, 80, 0.8);
     margin-top: 3%;
     height: 92%;
-    border-radius: 0 4em 4em 0;
+    border-radius: 0 0.1em 0.1em 0;
 }
 #megamenu-back-btn {
-    border-radius: 1.2em;
+    border-radius: 0.3em;
     color: var(--main-color);
     transition: all linear .3s;
-    padding: 0 0 10px;
+    padding: 0 0 6px;
 }
 
 #megamenu-back-btn:hover {
@@ -885,7 +864,7 @@ sup.md-footnote {
 /* open */
 #m-open-local,
 #m-import-local {
-    border-radius: 1.2em;
+    border-radius: 0.3em;
 }
 
 #m-open-local:hover,
@@ -894,7 +873,7 @@ sup.md-footnote {
 }
 
 #recent-file-panel-search-input {
-    border-radius: 1.2em;
+    border-radius: 0.3em;
     transition: all linear .3s;
     font-family: var(--title-font);
     border: var(--small-dark-color) solid;
@@ -902,7 +881,7 @@ sup.md-footnote {
 }
 
 #recent-file-panel-action-btn {
-    border-radius: 1.2em;  
+    border-radius: 0.3em;  
 }
 
 #recent-file-panel-search-input:hover {
@@ -923,7 +902,7 @@ sup.md-footnote {
 #recent-file-panel-action-btn {
     background-color: var(--small-dark-color);
     color: var(--font-color);
-    border-radius: 0.7em;
+    border-radius: 0.3em;
 }
 
 .megamenu-menu-panel table {
@@ -936,7 +915,7 @@ sup.md-footnote {
 
 .megamenu-menu-panel table tr td, .megamenu-menu-panel table tr th {
     color: var(--font-color);
-    border-radius: 0.7em;
+    border-radius: 0.3em;
 }
 
 
@@ -979,7 +958,7 @@ sup.md-footnote {
     background-color: var(--main-color);
     color: white;
     padding: 5px 5px;
-    border-radius: 1.2em;
+    border-radius: 0.3em;
     transition: all linear .3s;
 }
 
@@ -987,7 +966,7 @@ sup.md-footnote {
     background-color: var(--main-color);
     color: white;
     padding: 5px 5px;
-    border-radius: 1.2em;
+    border-radius: 0.3em;
     transition: all linear .3s;
 }
 
@@ -995,13 +974,13 @@ sup.md-footnote {
     background-color: var(--main-color);
     color: white;
     padding: 5px 5px;
-    border-radius: 1.2em;
+    border-radius: 0.3em;
     transition: all linear .3s;
 }
 
 
 #file-library-search-input {
-    border-radius: .5em;
+    border-radius: 0.3em;
 }
 
 #file-library-search-input:focus {
@@ -1025,8 +1004,7 @@ div#file-library-list-children {
 }
 
 .outline-item-active {
-    border-top-right-radius: 2.2em;
-    border-bottom-right-radius: 2.2em;
+    border-radius: 0.3em;
     width: fit-content;
     background-color: var(--main-color) !important;
     color: white;
@@ -1043,7 +1021,7 @@ div#file-library-list-children {
 }
 #open-theme-folder-btn {
     transition: all .3s;
-    border-radius: 2em;
+    border-radius: 0.3em;
     border: none;
     color: white !important;
     background-color: var(--main-color);
@@ -1057,7 +1035,7 @@ div#file-library-list-children {
 /* export */
 .long-btn {
     transition: all .3s;
-    border-radius: 2em;
+    border-radius: 0.3em;
     border: 2px solid var(--main-color);
     color: var(--main-color);
 }
@@ -1069,7 +1047,7 @@ div#file-library-list-children {
 }
 
 .long-btn-wrap {
-    padding: 10px;
+    padding: 6px;
 }
 
 .megamenu-content,
@@ -1084,7 +1062,7 @@ div#file-library-list-children {
 
 
 .megamenu-menu-panel h1 {
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     width: fit-content !important;
     border-bottom: var(--main-color) solid 3px;
     background: var(--dark-color);
@@ -1104,14 +1082,14 @@ div#file-library-list-children {
 /* modal exit dialog */
 .btn-primary {
     transition: all .3 linear;
-    border-radius: 1.2em;
+    border-radius: 0.3em;
     background-color: var(--main-color);
     color: var(--font-color);
 }
 
 .btn-default {
     transition: all .3 linear;
-    border-radius: 1.2em;
+    border-radius: 0.3em;
     border: var(--main-color) 3px solid;
     color: var(--shadow-color);
     background-color: var(--small-dark-color);
@@ -1132,7 +1110,7 @@ div#file-library-list-children {
 }
 
 .modal-content {
-    border-radius: 1.5em;
+    border-radius: 0.3em;
     border: none;
     background: var(--small-dark-color) !important;
     color: var(--font-color) !important;
@@ -1153,13 +1131,12 @@ div#file-library-list-children {
 .nav-group-item.active {
     color: white;
     font-family: var(--title-font);
-    transition: all .3s;
-    border-radius: 1.5em;
-    padding: 6px 11px 6px 11px;
+    border-radius: 0.3em;
+    padding: 3px 6px 3px 6px;
 }
 .nav-group-item {
     transition: all .3s;
-    border-radius: 1.5em;
+    border-radius: 0.3em;
     width: fit-content;
     cursor: pointer;
 }
@@ -1173,22 +1150,21 @@ div#file-library-list-children {
 
 input:not([type=range]):not([type=color]) {
     outline: none;
-    border: 2px solid var(--main-color);
-    border-radius: .7em;
+    border: 0.5px solid var(--main-color);
+    border-radius: 0.3em;
     font-size: 16px;
 }
 
 input:not([type=range]):not([type=color]):focus {
-    border-radius: .7em;
+    border-radius: 0.3em;
     color: white;
     background-color: var(--main-color);
-    box-shadow: 0 0 6px 3px var(--shadow-color);
     transition: all .3s linear;
 }
 
 .pane select,
 .pane .btn {
-    border-radius: 0.7em;
+    border-radius: 0.3em;
     cursor: pointer;
     margin-right: 10px;
 }
@@ -1233,7 +1209,7 @@ input:not([type=range]):not([type=color]):focus {
 }
 
 .typora-node #typora-sidebar {
-    background-color: var(--small-dark-color);
+    background-color: var(--dark-main-color);
 }
 
 .info-panel-tab-title {
@@ -1311,7 +1287,7 @@ div #file-library-list-children {
 }
 
 .ty-tooltip {
-    border-radius: 0.7em !important;
+    border-radius: 0.3em !important;
     background: var(--small-dark-color) !important;
     color: var(--font-color) !important;
 }
@@ -1362,7 +1338,7 @@ button.btn-default {
 
 textarea {
     background-color: var(--small-dark-color);
-    border-radius: 0.7em;
+    border-radius: 0.3em;
     font-family: var(--base-font) !important;
 }
 
@@ -1409,7 +1385,7 @@ textarea {
 
 .export-detail input[type=number], .export-detail input[type=text] {
     background-color: var(--small-dark-color);
-    border-radius: 0.7em;
+    border-radius: 0.3em;
     font-family: var(--base-font) !important;
     color: var(--font-color);
 }

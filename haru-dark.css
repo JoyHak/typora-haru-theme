@@ -436,52 +436,39 @@ pre.md-meta-block {
     background: var(--dark-color);
 }
 
+table tr {
+    border: 1px solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
 
-/* table */
-#write table
-{
-    width: 95%;
-    border-collapse: collapse;
-    text-align: center;
-    font-family: var(--monospace);
-    margin: 20px;
+table tr:nth-child(2n),
+thead {
+    background-color: var(--table-row2-color);
 }
-#write table td, table th
-{
-    border: 1px solid transparent;
-    color: rgb(18, 18, 18);
-    padding: 5px;
-    border-radius: 0.3em;
+
+table th {
+    font-weight: bold;
+    border: 1px solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
 }
-#write table td {
-    font-family: var(--title-font);
-    color: var(--light-color) !important;
+
+table td {
+    border: 1px solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
 }
-#write table thead th
-{
-    background-color: var(--shadow-color);
-    font-family: var(--title-font);
-    font-size: 20px;
-    color: white;
-    font-weight: bolder;
-    width: 100px;
-    text-align: center;
-    vertical-align: middle;
-    padding: 5px;
+
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
 }
-table tr:nth-child(odd)
-{
-    background: var(--dark-color);
-}
-table tr:nth-child(even)
-{
-    background: var(--dark-main-color);
-}
-table td:hover {
-  background-color: var(--shadow-color) !important;
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
+
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -1378,14 +1365,6 @@ textarea {
     border-radius: 0.3em;
     font-family: var(--base-font) !important;
     color: var(--font-color);
-}
-
-table select {
-    transition: none;
-}
-
-table select:hover {
-    transition: none;
 }
 
 /* 输入三个点之后的语言建议 */

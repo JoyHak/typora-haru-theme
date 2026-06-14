@@ -432,6 +432,10 @@ pre.md-meta-block {
     background: var(--dark-color);
 }
 
+table thead th {
+    font-family: var(--title-font);
+}
+
 table tr {
     border: 1px solid var(--table-border-color);
     margin: 0;
@@ -439,7 +443,7 @@ table tr {
 }
 
 table tr:nth-child(2n),
-thead {
+table thead {
     background-color: var(--table-row2-color);
 }
 
@@ -483,7 +487,7 @@ a {
     text-decoration: none;
     text-decoration-style: none;
     cursor: pointer;
-    padding: 0 3px 0 3px;
+    padding: 0 1px 0 1px;
 }
 
 
@@ -711,6 +715,30 @@ input[type='checkbox']:hover:before {
 sup.md-footnote {
     background-color: var(--dark-color);
     color: var(--light-color);
+}
+
+/* search/replace panel */
+#md-searchpanel .searchpanel-search-option-btn,
+#md-searchpanel .btn {
+    border-radius: 0.3em;
+    background: var(--small-dark-color);
+    color: var(--font-color);
+    border: 0;
+    text-align: center !important;
+}
+
+#md-searchpanel .searchpanel-search-option-btn:hover,
+#md-searchpanel .btn:hover {
+    transition: all .3 linear;
+    color: white;
+    background-color: var(--shadow-color);
+}
+
+#md-searchpanel .searchpanel-search-option-btn:focus,
+#md-searchpanel .btn:focus {
+    transition: all .3 linear;
+    color: white;
+    background-color: var(--main-color);
 }
 
 /* open */
@@ -987,6 +1015,7 @@ div#file-library-list-children {
     padding: 3px 6px 3px 6px;
 }
 .nav-group-item {
+    font-family: var(--base-font) !important;
     transition: all .3s;
     border-radius: 0.3em;
     width: fit-content;
@@ -996,21 +1025,44 @@ div#file-library-list-children {
     background-color: var(--main-color) !important;
     color: white !important;
 }
+
 .pane-group {
-    font-family: var(--title-font);
+    font-family: var(--title-font) !important;
 }
 
+.pane select,  /* combobox */
+.pane .btn,    /* button */
+.input-group-content > table > tbody > tr > td:nth-child(2) > div  /* List markers example */
+{
+    border: 0 !important;
+    border-radius: 0.5em;
+    background: var(--small-gray-color) !important;
+}
+
+/* combobox */
+.pane select {
+    padding: 5px;
+    border-radius: 0.5em;
+}
+
+.pane select [popup] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+#md-searchpanel input,
 input:not([type=range]):not([type=color]) {
     outline: none;
-    border: 0.5px solid var(--main-color);
-    border-radius: 0.3em;
+    border: 0.5px solid var(--table-border-color);
+    border-radius: 0.4em;
     font-size: 16px;
 }
 
+#md-searchpanel input:focus,
 input:not([type=range]):not([type=color]):focus {
-    border-radius: 0.3em;
-    color: white;
-    background-color: var(--main-color);
+    border: 0.5px solid var(--main-color);
     transition: all .3s linear;
 }
 
@@ -1207,7 +1259,7 @@ textarea {
 
 .export-detail input[type=number], .export-detail input[type=text] {
     background-color: var(--small-dark-color);
-    border-radius: 0.3em;
+    border-radius: 0.5em;
     font-family: var(--base-font) !important;
     color: var(--font-color);
 }

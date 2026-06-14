@@ -1008,7 +1008,6 @@ div#file-library-list-children {
     transition: all .3s;
     font-family: var(--title-font);
     scale: 1.2;
-    margin-left: 3px;
 }
 
 .nav-group-item.active {
@@ -1041,7 +1040,18 @@ div#file-library-list-children {
     background: var(--small-gray-color);
 }
 
+/* Markdown > Code Fences > Default Code Language */
+.input-autocomplete,
+.input-autocomplete-row {
+    color: var(--font-color) !important;
+    background: var(--dark-main-color) !important;
+    font-family: var(--monospace) !important;
+    font-size: 1em;
+    border: 0 !important;
+}
+
 #md-searchpanel input,
+.search-input,
 input:not([type=range]):not([type=color]) {
     outline: none;
     border: 0.5px solid var(--table-border-color);
@@ -1050,9 +1060,12 @@ input:not([type=range]):not([type=color]) {
 }
 
 #md-searchpanel input:focus,
+.search-input:focus,
 input:not([type=range]):not([type=color]):focus {
     border: 0.5px solid var(--main-color);
     transition: all .3s linear;
+    border-radius: 0.5em;
+    box-shadow: none;
 }
 
 .pane select,
@@ -1066,15 +1079,6 @@ input:not([type=range]):not([type=color]):focus {
     color: white !important;
     transition: all .3s linear;
     background-color: var(--main-color);
-}
-
-.label-input-group td:hover {
-    box-shadow: none;
-}
-
-.label-input-group .row:hover {
-    color: black;
-    background-color: white;
 }
 
 #write.enable-diagrams>[mermaid-type=gantt].md-fences:not(.md-focus) {

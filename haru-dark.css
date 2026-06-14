@@ -1004,16 +1004,18 @@ div#file-library-list-children {
   }
 
 /* Perference */
-.nav-group-item-item:hover {
+.nav-group-item:hover {
     transition: all .3s;
-    border: 2px solid var(--main-color);
+    font-family: var(--title-font);
+    scale: 1.2;
+    margin-left: 3px;
 }
+
 .nav-group-item.active {
     color: white;
     font-family: var(--title-font);
-    border-radius: 0.3em;
-    padding: 3px 6px 3px 6px;
 }
+
 .nav-group-item {
     font-family: var(--base-font) !important;
     transition: all .3s;
@@ -1031,25 +1033,12 @@ div#file-library-list-children {
 }
 
 .pane select,  /* combobox */
-.pane .btn,    /* button */
-.input-group-content > table > tbody > tr > td:nth-child(2) > div  /* List markers example */
+.pane .btn     /* button */
 {
     border: 0 !important;
+    padding: 5px 5px;
     border-radius: 0.5em;
-    background: var(--small-gray-color) !important;
-}
-
-/* combobox */
-.pane select {
-    padding: 5px;
-    border-radius: 0.5em;
-}
-
-.pane select [popup] {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid red;
-    border-radius: 5px;
+    background: var(--small-gray-color);
 }
 
 #md-searchpanel input,

@@ -12,6 +12,7 @@
     --dark-main-color:      rgb(25, 25, 25);
     --side-bar-bg-color:    rgb(25, 25, 25);
     --small-dark-color:     rgb(30, 31, 32);
+    --small-gray-color:     rgb(40, 40, 40);
     --transplate-color :    rgba(30, 91, 255, 0.1);
     --dark-color :          rgb(25, 25, 25);
     --light-color :         rgb(248, 242, 255);
@@ -64,7 +65,7 @@
 
 @font-face {
     font-family: "iMWritingQuat";
-    src: url("./haru/iMWritingQuatNerdFont-Regular.ttf.ttf");
+    src: url("./haru/iMWritingQuatNerdFont-Regular.ttf");
 }
 
 /* global setting */
@@ -342,7 +343,7 @@ code {
     padding: 4px 6px;
     color: var(--light-color);
     white-space: pre-wrap;
-    background: rgb(40, 40, 40);
+    background: var(--small-gray-color);
     border-radius: 0.5em;
 }
 
@@ -553,7 +554,7 @@ input[type='checkbox']:hover:before {
 ::-moz-selection,
 ::selection {
     background: var(--select-text-bg-color);
-color: auto;
+    color: auto;
     text-shadow: none;
 }
 
@@ -561,6 +562,40 @@ color: auto;
 .md-rawblock:hover>.md-rawblock-container, 
 .md-rawblock:hover>.md-rawblock-tooltip {
     background: var(--select-text-bg-color) !important;
+}
+
+/* scrollbar */
+::-webkit-scrollbar:horizontal {
+    background-color: var(--dark-main-color);
+    margin: 2px 16px 2px 16px;
+    border-radius: 0.5em;
+}
+
+::-webkit-scrollbar:vertical {
+    background-color: var(--dark-main-color);
+    margin: 16px 2px 16px 2px;
+    border-radius: 0.5em;
+}
+
+::-webkit-scrollbar:horizontal:hover,
+::-webkit-scrollbar:vertical:hover {
+    background-color: var(--small-dark-color);
+    transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-thumb:vertical {
+    background-color: var(--small-gray-color);
+    border: none;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover,
+::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 0.8em;
+    transition: all 0.3s;
 }
 
 /* outside */
@@ -1203,8 +1238,7 @@ footer.ty-footer {
     border:  0;
 }
 
-.ty-preferences,
-#file-library, 
+#file-library,
 #outline-content {
     font-family: var(--base-font) !important;
 }

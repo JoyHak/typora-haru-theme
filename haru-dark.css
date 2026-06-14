@@ -796,71 +796,12 @@ sup.md-footnote {
     border-radius: 0.3em;
 }
 
-/* side bar Ctrl Shift 2 */
-/* .typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) #typora-sidebar {
-    display: block;
-    left: 0;
-    transition: left .3s;
-    border-radius: 0em 3em 3em 0em;
-    box-shadow: 0 0 8px 3px rgb(100 100 100 / 80%);
-    margin-top: 20px;
-    margin-bottom: 5%;
-    height: 95%;
-    padding-right: 10px;
-} */
-
-.info-panel-tab-border {
-    color: var(--main-color) !important;
-    background-color: var(--main-color) !important;
-}
-
-.outline-content {
-    padding: 3px 18px 3px 0;
-}
-
-.outline-item {
-    margin-left: -20px;
-    margin-right: -20px;
-    border-left: 20px solid transparent;
-    border-right: 16px solid transparent;
-}
-
-.outline-item:hover {
-    background-color: var(--shadow-color);
-    color: white;
-}
-
-.active-tab-files  #info-panel-tab-file .info-panel-tab-title {
-    background-color: var(--main-color);
-    color: white;
-    padding: 5px 5px;
-    border-radius: 0.3em;
-    transition: all linear .3s;
-}
-
-.active-tab-outline #info-panel-tab-outline .info-panel-tab-title {
-    background-color: var(--main-color);
-    color: white;
-    padding: 5px 5px;
-    border-radius: 0.3em;
-    transition: all linear .3s;
-}
-
 .ty-show-search #info-panel-tab-search  .info-panel-tab-title {
     background-color: var(--main-color);
     color: white;
     padding: 5px 5px;
     border-radius: 0.3em;
     transition: all linear .3s;
-}
-
-
-#file-library-search-input {
-    border-radius: 0.3em;
-}
-
-#file-library-search-input:focus {
-    border: 2px solid var(--main-color);
 }
 
 .info-panel-tab-border {
@@ -880,14 +821,10 @@ div#file-library-list-children {
     transition: all linear .3s;
 }
 
-.outline-item-active {
-    border-radius: 0.3em;
-    width: fit-content;
-    background-color: var(--main-color) !important;
-    color: white;
-    transition: all linear .3s;
+.file-list-item {
+    padding: 0;
+    border:  0;
 }
-
 
 /* theme */
 .theme-preview-div.active, .theme-preview-div.active:hover {
@@ -939,7 +876,6 @@ div#file-library-list-children {
     font-family: var(--title-font) !important;
     background: var(--dark-color);
 }
-
 
 .megamenu-menu-panel h1 {
     padding-bottom: 6px;
@@ -1051,6 +987,7 @@ div#file-library-list-children {
 }
 
 #md-searchpanel input,
+#file-library-search-input,
 .search-input,
 input:not([type=range]):not([type=color]) {
     padding: 2px;
@@ -1061,6 +998,7 @@ input:not([type=range]):not([type=color]) {
 }
 
 #md-searchpanel input:focus,
+#file-library-search-input:focus,
 .search-input:focus,
 input:not([type=range]):not([type=color]):focus {
     border: 2px solid rgba(72, 164, 255, 0.5);
@@ -1129,18 +1067,113 @@ div #file-library-list-children {
     color: var(--font-color) !important;
 }
 
+/* side bar (panel) */
+.outline-content {
+    padding: 0; /* superceeded by outline-item */
+}
 
-/* Side bar (panel) */
+.outline-content ol, .outline-content ul {
+    line-height: 1;
+}
+
+.outline-item {
+    transition: all 0.3s;
+    width: 100%;
+    padding: 8px;
+}
+
+.outline-item:hover {
+    transition: all 0.3s;
+    background-color: var(--small-dark-color);
+    border-radius: 0.3em;
+    /* disable default margin to fix incorrect background color placement */
+    border: 0;
+    margin: 0;
+}
+
+.outline-label:hover {
+    /* underlined text doesn't matches theme design */
+    text-decoration: unset;
+}
+
+.outline-item-active {
+    transition: all 0.3s;
+    width: 100%;
+    background-color: var(--small-gray-color);
+    border-radius: 0.3em;
+}
+
+.info-panel-tab-title {
+    padding: 0.4em;
+}
+
+.info-panel-tab-border {
+    color: var(--main-color) !important;
+    background-color: var(--main-color) !important;
+}
 .sidebar-footer-main-item-label {
     color: var(--font-color) !important;
 }
 
-#outline-content {
+.file-node-content {
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
     color: var(--font-color);
+    padding: 0; /* superceeded by file-tree-node */
 }
 
-.outline-content li, .outline-content ul {
-    padding-left: 10px;
+.file-node-content:focus,
+.file-node-content:hover {
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+#file-library .active {
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.file-tree-node.active {
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    border-radius: 0.3em;
+    background-color: var(--small-gray-color);
+    border-left: var(--small-dark-color);
+    border-color: var(--small-dark-color);
+}
+
+.file-node-content {
+    /* fix vertical filename position */
+    padding-top: 1px;
+}
+
+.file-tree-node {
+    /* add some space betwen files */
+    padding: 2px;
+}
+
+.file-node-expanded > .file-node-children {
+    /* indendation in expanded folder */
+    padding-left: 15px;
+}
+
+.file-node-background {
+    display: none;
+}
+
+/* border around mouse clicked node */
+.file-library-node:not(.file-node-root):focus > .file-node-content {
+    transition: none;
+    outline: 2px solid rgba(72, 164, 255, 0.5);
+    border-radius: 0.2em;
 }
 
 .typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) footer.ty-footer {
@@ -1211,47 +1244,6 @@ textarea {
     font-family: var(--base-font) !important;
 }
 
-.file-node-content {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    color: var(--font-color);
-    padding: 5px;
-}
-
-
-.file-node-content:hover {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    color: var(--font-color);
-    cursor: pointer;
-}
-
-.file-node-content:focus {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    cursor: pointer;
-}
-
-#file-library .active {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    color: var(--font-color);
-    cursor: pointer;
-}
-
-.file-tree-node.active>.file-node-background {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    background-color: var(--main-color);
-    border-left: var(--small-dark-color);
-    border-color: var(--small-dark-color);
-}
-
 .export-detail input[type=number], .export-detail input[type=text] {
     background-color: var(--small-dark-color);
     border-radius: 0.5em;
@@ -1270,22 +1262,7 @@ textarea {
     box-shadow: 0 1px 0 rgba(12,13,14,.1),0 1px 3px rgba(12,13,14,.1),0 4px 20px rgba(12,13,14,.035),0 1px 1px rgba(12,13,14,.025);
 }
 
-.info-panel-tab-title {
-    width: 8em;
-    padding: 0;
-}
-
 .sidebar-footer,
 footer.ty-footer {
    border:  0; 
-}
-
-.file-list-item {
-    padding: 0;
-    border:  0;
-}
-
-#file-library,
-#outline-content {
-    font-family: var(--base-font) !important;
 }

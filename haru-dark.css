@@ -1053,6 +1053,7 @@ div#file-library-list-children {
 #md-searchpanel input,
 .search-input,
 input:not([type=range]):not([type=color]) {
+    padding: 2px;
     outline: none;
     border: 0.5px solid var(--table-border-color);
     border-radius: 0.4em;
@@ -1062,7 +1063,8 @@ input:not([type=range]):not([type=color]) {
 #md-searchpanel input:focus,
 .search-input:focus,
 input:not([type=range]):not([type=color]):focus {
-    border: 0.5px solid var(--main-color);
+    border: 2px solid rgba(72, 164, 255, 0.5);
+    padding: 1px;
     transition: all .3s linear;
     border-radius: 0.5em;
     box-shadow: none;
